@@ -1,0 +1,53 @@
+<!-- Bootstrap core JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery and JavaScript Plugins -->
+<script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="/assets/vendor/counterup/jquery.counterup.min.js"></script>
+<script src="/assets/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="/assets/vendor/swiper/js/swiper.min.js"></script>
+
+<!-- Custom JavaScript for all pages -->
+<script src="/assets/js/{{jsBundleFileName}}"></script>
+
+<!-- MailMunch -->
+<script src="//a.mailmunch.co/app/v1/site.js" id="mailmunch-script" data-mailmunch-site-id="189169" async="async"></script>
+
+<script>
+    /* Functions that need Handlebars rendering – try to keep this thin! */
+
+    /**
+     * @param {int} languageIndex
+     * @returns {string} Relative URL. E.g. "/en/pricing"
+     */
+    function getPageUrlByLanguageIndex(languageIndex) {
+        const map = {
+            1: '/en/{{#if nextPageUrls.en}}{{nextPageUrls.en}}{{else}}{{/if}}',
+            2: '/id/{{#if nextPageUrls.id}}{{nextPageUrls.id}}{{else}}{{/if}}',
+            3: '/esmx/{{#if nextPageUrls.esmx}}{{nextPageUrls.esmx}}{{else}}{{/if}}',
+            4: '/hu/{{#if nextPageUrls.hu}}{{nextPageUrls.hu}}{{else}}{{/if}}',
+            5: '/pl/{{#if nextPageUrls.pl}}{{nextPageUrls.pl}}{{else}}{{/if}}',
+            6: '/ptbr/{{#if nextPageUrls.ptbr}}{{nextPageUrls.ptbr}}{{else}}{{/if}}',
+            7: '/ro/{{#if nextPageUrls.ro}}{{nextPageUrls.ro}}{{else}}{{/if}}',
+            8: '/vi/{{#if nextPageUrls.vi}}{{nextPageUrls.vi}}{{else}}{{/if}}',
+        };
+        return map[languageIndex] || '/';
+    }
+</script>
+<script>
+    initializePlugins(jQuery);
+    initializeMixpanel(mixpanel, localStorage, location.search);
+    updateStoredUserTrackingData(localStorage, window.location, document.referrer);
+
+    redirectIfNoUrlLocaleCodeIsInUrl(navigator, window.location);
+
+    /* Changes the language selected on the language selector */
+    initializeLanguageSelectorValue(jQuery, window.location.pathname);
+
+    /* Switches URL according to chosen language */
+    const languageInput = document.getElementById('inputLanguage');
+    languageInput.addEventListener('change',
+                () => { window.location.href = getPageUrlByLanguageIndex(languageInput.value); });
+</script>

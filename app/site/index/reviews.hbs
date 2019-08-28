@@ -1,0 +1,35 @@
+{{>navbar-white}}
+
+<div class="container-fluid d-flex">
+
+    <!-- Testimonials -->
+    <main id="testimonials"
+          class="col-12 col-lg-12 py-5">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2 class="h1 heading-brackets">{{__ "CodeBerry School reviews" }}
+                </h2>
+            </div>
+            <div class="col-12 content card-columns px-0">
+                {{#each reviews}}
+                    <div class="card rounded">
+                        <h4>{{ first_line }}</h4>
+                        <p>{{ rest_of_the_text }}</p>
+                        <div class="autor">
+                            <div class="autor_img"
+                                 style="background-image: url({{ photo }});"></div>
+                            <div class="autor_desc">
+                                <h6>{{ name }}</h6>
+                                <small class="text-muted">{{ city }}</small>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </main>
+
+</div>
+<!-- /.container-fluid -->
+
+{{>footer}}

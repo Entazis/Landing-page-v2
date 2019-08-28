@@ -1,0 +1,15 @@
+{
+    "ignore": [
+        ".idea/*",
+        "node_modules/*",
+        "app/i18n/**/*.json",
+        "app/i18n/**/*.csv",
+        "app/i18n/**/*.po",
+        "app/static/*",
+        "public/assets/css/*.min.css",
+        "public/assets/js/*.min.js"
+    ],
+    "env": {
+        "NODE_ENV": "local"
+    }
+}

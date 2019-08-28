@@ -1,0 +1,65 @@
+<!--Start of Tawk.to Script-->
+<script type="text/javascript" charset="utf-8">
+    var Tawk_API = Tawk_API || {};
+    var Tawk_LoadStart=new Date();
+
+    (function(){
+        let s1 = document.createElement("script");
+        let s0 = document.getElementsByTagName("script")[0];
+
+        // with cookie
+        const locale = getCookie('locale');
+
+        switch (locale) {
+            case 'en':
+            case 'en-US':
+                s1.src='https://embed.tawk.to/5cc5ca304aa6620df2cf9416/default';
+                break;
+            case 'esmx':
+            case 'es-MX':
+                s1.src='https://embed.tawk.to/5cc5cad54aa6620df2cf9426/default';
+                break;
+            case 'hu':
+            case 'hu-HU':
+                s1.src='https://embed.tawk.to/5cac4ff253f1e453fb8cdd1c/default';
+                break;
+            case 'id':
+            case 'id-ID':
+                s1.src='https://embed.tawk.to/5cc5ca954aa6620df2cf941d/default';
+                break;
+            case 'pl':
+            case 'pl-PL':
+                s1.src='https://embed.tawk.to/5cc5caf74aa6620df2cf942b/default';
+                break;
+            case 'ptbr':
+            case 'pt-BR':
+                s1.src='https://embed.tawk.to/5cc5cb12d6e05b735b44aa1f/default';
+                break;
+            case 'ro':
+            case 'ro-RO':
+                s1.src='https://embed.tawk.to/5cc02a29d6e05b735b4408dc/default';
+                break;
+            case 'vi':
+            case 'vi-VN':
+                s1.src='https://embed.tawk.to/5cc5cb35d6e05b735b44aa26/default';
+                break;
+            default:
+                // en-US
+                s1.src='https://embed.tawk.to/5cc5ca304aa6620df2cf9416/default';
+                break;
+        }
+
+        s1.async=true;
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+
+    Tawk_API.onLoad = function(){
+        Tawk_API.setAttributes({
+            'name': decodeURIComponent(getCookie('name')),
+            'email': decodeURIComponent(getCookie('email'))
+            //'email': getCookie('email')
+        }, function (error) {});
+    };
+</script>
+<!--End of Tawk.to Script-->

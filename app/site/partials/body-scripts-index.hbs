@@ -1,0 +1,27 @@
+<script>mixpanel.track("Visited Landing page");</script>
+<!-- Central timeline -->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        mixpanel.init('ecfd3ef6c685aca6c1fcfb984cecf75e', {
+            'loaded': function (mixpanel) {
+                let mixpanelDistinctId = null;
+                try {
+                    mixpanelDistinctId = mixpanel.get_distinct_id();
+                } catch (error) {
+                    mixpanelDistinctId = extractQueryParameters(window.location.href)['distinct_id'].replace(/\+/g, ' ');
+                }
+
+                if (mixpanelDistinctId) {
+                    sendRegisterEventToTimelineUserRequest({
+                        identification: mixpanelDistinctId,
+                        identificationType: 'mixpanelDistinctId',
+                        event: {
+                            eventName: 'landingPageLoad'
+                        }
+                    });
+                }
+            }
+        });
+    });
+</script>
+<!-- /Central timeline -->

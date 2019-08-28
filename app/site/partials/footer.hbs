@@ -1,0 +1,92 @@
+<footer id="footer" class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <h5>{{__ "About CodeBerry" }}</h5>
+                <p>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.about}}">{{__ "About us" }}</a><br>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.press}}">{{__ "Press" }}</a><br>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.reviews}}">{{__ "CodeBerry reviews" }}</a><br>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.team}}">{{__ "Team" }}</a><br>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.scholarship}}">{{__ "Scholarship" }}</a>
+                </p>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <h5>{{__ "Legal" }}</h5>
+                <p>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.privacy-policy}}">{{__ "Privacy Policy" }}</a><br>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.terms-of-service}}">{{__ "Terms of Service" }}</a><br>
+                    <a href="/{{urlLocale}}/{{urlsForLocale.refund-policy}}">{{__ "Returns and Refunds Policy" }}</a>
+                </p>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="social">
+                    <h5>{{__ "Social" }}</h5>
+                    <a href="{{__ "https://www.facebook.com/codeberryschool/" }}" target="_blank">
+            <span class="fa-stack">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-facebook-f fa-stack-1x fa-inverse text-dark"></i>
+            </span>
+                    </a>
+                    <a href="https://www.instagram.com/codeberryschool/" target="_blank">
+            <span class="fa-stack">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-instagram fa-stack-1x fa-inverse text-dark"></i>
+            </span>
+                    </a>
+                    <a href="https://codeberryschool.com/blog/{{urlLocale}}/" target="_blank">
+            <span class="fa-stack">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-medium fa-stack-1x fa-inverse text-dark"></i>
+            </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <h5>{{__ "Contact Us" }}</h5>
+                <p>{{__ "CodeBerry School Kft." }}<br>
+                    {{#compare urlLocale 'hu'}}
+                        {{__ "1119 Fehérvári út 149. II/8. Budapest, Hungary" }}
+                    {{/compare}}
+                </p>
+                <p>{{__ "English speaking customer service:" }}<br>
+                    <a href="mailto:hello@codeberryschool.com">hello@codeberryschool.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr class="footer m-0 mt-1">
+    <section id="copyright" class="text-white py-3">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-12">
+                    <p><span id="date"></span> © {{__ "CodeBerry School Kft." }}</p>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <p><a href="/{{urlLocale}}/{{urlsForLocale.about}}">{{__ "Made with ❤️ by a global team." }}</a></p>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <select class="custom-select" id="inputLanguage">
+                        <option value="1">English</option>
+                        <option value="2">Bahasa Indonesia</option>
+                        <option value="3">Español (México)</option>
+                        <option value="4">Magyar</option>
+                        <option value="5">Polski</option>
+                        <option value="6">Português (Brasil)</option>
+                        <option value="7">Română</option>
+                        <option value="8">Tiếng Việt</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section><!-- /#copyright -->
+</footer>
+
+<!-- back-to-top -->
+<div id="back-to-top">
+    <a href="#top" class="pagescroller" title="Back to Top"><i class="fas fa-chevron-up fa-md"></i></a>
+</div>
+
+<script>
+    document.getElementById("date").innerHTML = new Date().getFullYear();
+</script>

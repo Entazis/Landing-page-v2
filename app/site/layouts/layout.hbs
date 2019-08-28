@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>{{title}} | {{__ "CodeBerry Programming School"}}</title>
+    <meta name="description" content="{{__ "Learn programming online, in English, at your own pace, without any prior knowledge, and start a new career. We provide mentors and career counselors to help you learn programming and get and job in IT." }}" />
+    <meta name="keywords" content="{{__ "learn programming, online, programming course, html, css, javascript, node.js, git, bootstrap" }}" />
+
+    <!-- Open Graph tags for facebook crawler -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{title}} | {{__ "CodeBerry Programming School"}}">
+    <meta property="og:description" content="{{__ "Study at home, on breaks or at your favorite coffee shop." }} {{__ "You can find over 100+ hours of fun assignments, regardless of your skill level." }} {{__ "You can start our course as a complete beginner. No previous programming knowledge necessary." }}">
+    <meta property="og:site_name" content="{{__ "CodeBerry Programming School" }}">
+    <meta property="og:image" content="/assets/img/img-header.jpg">
+
+    {{#if isNoIndexPage}}
+        <!-- This page should not show up in google index -->
+        <meta name="robots" content="noindex,nofollow"/>
+    {{/if}}
+
+    {{>head-scripts}}
+
+    <link href="/assets/img/favicon.ico" rel="icon" sizes="16x16 32x32" type="image/x-icon" />
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/css/swiper.min.css" rel="stylesheet" />
+    <link href="/assets/css/{{cssBundleFileName}}" rel="stylesheet" />
+</head>
+<body id="top" {{#if isFrontPage}}class="inner-page"{{/if}}>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2NLHMV"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{{{body}}}
+
+{{>body-scripts-all}}
+
+{{>tawk-to-chat}}
+
+</body>
+</html>

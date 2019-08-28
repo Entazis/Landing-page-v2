@@ -1,0 +1,103 @@
+<!-- Pricing Tables -->
+<section id="pricing" class="text-center bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-4 mx-auto">
+                <h2 class="h1 heading-brackets">{{__ "Pricing" }}</h2>
+                <p class="lead">{{__ "Choose the plan that’s right for you:" }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-6">
+                <div class="card rounded sr-card">
+                    <div class="card-header">
+                        <h4>{{__ "Free Pack" }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">{{__ "Free" }}</h2>
+                        <ul class="list-unstyled">
+                            <li>{{__ "Access to the first 25 lessons" }}</li>
+                            <li>{{__ "An active community that can help you if you're stuck" }}</li>
+                            {{#if mentor4all}}
+                                <li>{{__ "1 hour of live mentoring" }}</li>
+                                <li>{{__ "A friendly human answers your code related questions in 24 hours" }}</li>
+                            {{/if}}
+                            <li><span class="op-50">&nbsp;</span></li>
+                            <li><span class="op-50">&nbsp;<br>&nbsp;</span></li>
+                        </ul>
+                        <a href="https://orange.codeberryschool.com/auth/signup?locale={{fullLocale}}" class="btn btn-lg btn-pill btn-secondary" role="button">{{__ "Sign up for free" }}</a>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="card rounded bg-primary text-white featured sr-card">
+                    <div class="card-header">
+                        <span class="badge bg-secondary">{{__ "Most popular" }}</span>
+                        <h4>{{__ "Basic Monthly Pack" }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">{{ pricing.basic-monthly-price }}<small class="op-50"> {{__ "/ month" }}</small></h2>
+                        <ul class="list-unstyled">
+                            <li><strong>{{__ "Access to all of our courses" }}</strong></li>
+                            <li>{{__ "An active community that can help you if you're stuck" }}</li>
+                            <li>{{__ "60 day money-back guarantee" }}</li>
+                            {{#if mentor4all}}
+                                <li>{{__ "1 hour of live mentoring every week" }}</li>
+                                <li>{{__ "A friendly human answers your code related questions in 24 hours" }}</li>
+                            {{/if}}
+                            <li><span class="op-50">&nbsp;<br>&nbsp;</span></li>
+                        </ul>
+                        <a href="https://payment.codeberryschool.com/?plan={{ pricing.basic-monthly-plan }}&locale={{ fullLocale }}" class="btn btn-lg btn-pill btn-light text-primary" role="button">{{__ "Get started" }}</a>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-6 -->
+            {{#if pricing.mentor-monthly-plan}}
+                {{#unless mentor4all}}
+                    <div class="col-lg-6">
+                        <div class="card rounded sr-card">
+                            <div class="card-header">
+                                <h4>{{__ "Mentor Monthly Pack" }}</h4>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title pricing-card-title">{{ pricing.mentor-monthly-price }}<small class="op-50"> {{__ "/ month" }}</small></h2>
+                                <ul class="list-unstyled">
+                                    <li><strong>{{__ "Access to all of our courses" }}</strong></li>
+                                    <li>{{__ "An active community that can help you if you're stuck" }}</li>
+                                    <li>{{__ "60 day money-back guarantee" }}</li>
+                                    <li><strong>{{__ "A mentor who answers your questions and helps you learn quicker" }}</strong></li>
+                                </ul>
+                                <a href="https://payment.codeberryschool.com/?plan={{ pricing.mentor-monthly-plan }}&locale={{ fullLocale }}" class="btn btn-lg btn-pill btn-secondary" role="button">{{__ "Get started" }}</a>
+                            </div>
+                        </div>
+                    </div><!-- /pricing-3 -->
+                {{/unless}}
+            {{/if}}
+            <div class="col-lg-6">
+                <div class="card rounded sr-card">
+                    <div class="card-header">
+                        <h4>{{__ "Basic Yearly Pack" }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">{{ pricing.basic-yearly-price }}<small class="op-50"> {{__ "/ year" }}</small></h2>
+                        <ul class="list-unstyled">
+                            <li><strong>{{__ "Access to all of our courses" }}</strong></li>
+                            <li>{{__ "An active community that can help you if you're stuck" }}</li>
+                            <li>{{__ "60 day money-back guarantee" }}</li>
+                            {{#if mentor4all}}
+                                <li>{{__ "1 hour of live mentoring every week" }}</li>
+                                <li>{{__ "A friendly human answers your code related questions in 24 hours" }}</li>
+                            {{/if}}
+                            <li><strong>{{__ "Access for 1 full year" }}</strong></li>
+                        </ul>
+                        <a href="https://payment.codeberryschool.com/?plan={{ pricing.basic-yearly-plan }}&locale={{ fullLocale }}" class="btn btn-lg btn-pill btn-secondary" role="button">{{__ "Get started" }}</a>
+                    </div>
+                </div>
+            </div><!-- /pricing-4 -->
+        </div>
+        {{#if pricing.scholarshipURL}}
+            <p style="text-align: center;">{{{__ "You can’t afford to spend this much?<br>Apply for a" }}} <a href="{{ pricing.scholarshipURL }}">{{__ "CodeBerry scholarship program" }}</a>.</p>
+        {{/if}}
+    </div>
+</section>
